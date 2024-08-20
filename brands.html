@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+      
+
+	document.addEventListener("DOMContentLoaded", function() {
+	 
+		document.getElementById('loader').style.display = 'none'; 
+		document.getElementById('content').style.display = 'block';
+	});
+	
+		</script> 
+<style>
+    	.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); 
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.content {
+    display: none; 
+}
+
+    a:link {
+	color: #000;
+	text-decoration: none;
+}
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+a:active {
+	color: #333;
+	text-decoration: none;
+}
+    .image:hover{
+	cursor:pointer;
+}
+.card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card p:not(.heading) {
+  font-size: 14px;
+}
+
+.card p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.card:hover::after {
+  filter: blur(30px);
+}
+
+.card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+.bg{
+
+background-color:#fbf6fa;
+}
+
+</style>
+</head>
+<body>
+    <center>
+        <br><br>
+    <h1> Bronx Luggage</h1>
+    <br><br><br>
+
+    <div class="container">
+        <div class="row bg">
+            <div class="col-md-2 ">
+                <div >
+                    <div style="margin-top: 10px; margin-bottom:10px;" ;><a href="index.html">HOME</a></div>
+                </div>
+            </div>
+                    <div class="col-md-2"><img style="margin-top:11px ;" src="image/sa.JPG" width="116" height="22"  /></div>
+                    
+                    
+                 <div class="col-md-8"></div>
+            
+        </div>
+    </div>
+    
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="index.html"><img src="image/Delsey-Logo.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                  Luggage
+                </p>
+                <p>Delsey
+              </p></div></div>
+              <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="index.html"><img src="image/eg logo.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                  Luggage
+                </p>
+                <p>Eagle Creek
+              </p></div></div>
+              <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="index.html"><img src="image/Briggs-and-Riley-Logo.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                  Luggage
+                </p>
+                <p>Briggs & Rilly
+              </p></div></div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="bags.html"><img src="image/Coach-Logo.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                  Bags
+                </p>
+                <p>Coach
+              </p></div></div>
+            <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="bags.html"><img src="image/Chanel-Logo.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                  Bags
+                </p>
+                <p>Chanel
+              </p></div></div>
+             <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="bags.html"><img src="image/Hermes-Logo.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                  Bags
+                </p>
+                <p>Hermes
+              </p></div></div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="backpack.html"><img src="image/osprey-logo.png" width="130px" alt=""></a>
+                </p>
+                <p>
+                    Backpack
+                </p>
+                <p>Osprey
+              </p></div></div>
+              <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="backpack.html"><img src="image/Deuter-Horizontal-Screen-Black.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                  Backpack
+                </p>
+                <p>Dueter
+              </p></div></div>
+              <div class="col-md-4"><div class="card">
+                <p class="heading">
+                 <a href="backpack.html"><img src="image/pinkpop-logo-black-and-white.png" width="150px" alt=""></a>
+                </p>
+                <p>
+                    Backpack
+                </p>
+                <p>Pinkpops
+              </p></div></div>
+        </div>
+    </div>
+</center>
+    
+</body>
+</html>

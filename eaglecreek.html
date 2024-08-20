@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .maroon {
+            background-color: maroon;
+        }
+        .gray {
+            background-color: gray;
+        }
+        .red {
+            background-color: rgb(255, 0, 0);
+        }
+        .l1{
+            margin-top: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="product image/eagle creek black.png" class="d-block w-100 product-image" alt="Product Image">
+                        </div>
+                      
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 l1">
+                <h3>EAGLE CREEK</h3>
+                <p>Bronx Luggage</p>
+                <h3><del>$459</del> <span class="text-danger">$359.00</span></h3>
+             
+                <label for="size"><h3> Size :</h3></label>
+                <select name="size" id="size">
+                  <option value="samll">Cabin</option>
+                  <option value="normal">Medium</option>
+                  <option value="hard">Large</option>
+
+                </select>
+                <br><br>
+                <label for="colors"><h3>Colors :</h3></label>
+                <select name="color" id="color">
+                  <option class="red" value="Red">Red</option>
+                  <option class="maroon"value="Maroon">Maroon</option>
+                  <option class="gray"value="grey">Grey</option>
+
+                </select>
+                <br>
+                <br>
+                
+                <p>Quantity: 
+                    <input type="number" class="form-control d-inline-block w-auto" value="1" min="1" max="10">
+                </p>
+               
+                <center><a href="purchase.html"><button class="btn bt btn-dark">Buy it now</button></a>
+                <a href="index.html"><button class="btn bt btn-outline-dark">Back</button></a>
+            </center>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

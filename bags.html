@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bronx Bags</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+      
+
+  document.addEventListener("DOMContentLoaded", function() {
+   
+      document.getElementById('loader').style.display = 'none'; 
+      document.getElementById('content').style.display = 'block';
+  });
+  
+      </script>
+
+<style>
+  body{
+    background-color: rgb(253, 252, 250);
+  }
+    .body{
+       
+        margin-right: 70px;
+    }
+    .l1{
+    margin-left: 50px;
+    }
+.btn1{
+    border: black solid 1px;
+    font-size: larger;
+}
+.card1{
+   background-color: rgb(241, 241, 241);
+   height: 300px;
+    
+}
+.card2{
+   margin-top: 40px;
+  
+  padding: 15px;
+    border: solid 1px black;
+    height: 40rem;
+}
+.topline{
+        display: block;
+        position: relative;
+        font-size: 35px;
+        letter-spacing: 5px;
+        color:rgb(12, 12, 11);
+        animation-delay: 0.2s;
+
+    
+
+
+      }
+      a {
+  text-decoration: none;
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); 
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.content {
+    display: none; 
+}
+
+
+.menu__link {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+}
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 0;
+  transition: width .4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+}
+
+
+
+      .btn{
+  margin-top: 4rem;
+  margin-bottom: 20px;
+}
+
+      
+      .topline::after{
+
+        position: absolute;
+        content: '';
+        height: 5px;
+        width: 40px;
+        bottom: 10px;
+        background-color:gray;
+        
+        }
+         .topline:hover::after{
+        background-color: purple;
+        transition: 0.5s;
+      }
+     
+      video {
+    display: block;
+    vertical-align: middle;
+
+    min-height: 640px;
+    margin-top: 40px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+
+}
+.object-center {
+    -o-object-position: center;
+    object-position: center;
+}
+.object-cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.w-full {
+    width: 80%;
+}
+.h-full {
+    height: 100%;
+}
+img video {
+    max-width: 100%;
+    height: auto;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+ 
+  border: solid 3px black;
+  outline: none;
+
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: skyblue;
+  border: solid rgb(0, 183, 255) ;
+}
+footer{
+    position: absolute;
+margin-top: 40px;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+
+    padding-top: 20px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 2rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+   
+   
+
+   
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+
+
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100% ;
+    padding: 20px;
+padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.footer-menu{
+  float: right;
+
+}
+.footer-menu ul{
+  display: flex;
+}
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+  transition: color .4s ease;
+
+}
+.l5{
+margin-top: 50px;
+}
+.footer-menu ul li a{
+  color: #cfd2d6;
+  text-decoration: none;
+}
+footer ul li a{
+  color: #cfd2d6;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer-menu ul li a:hover{
+  color: #27bcda;
+}
+
+@media (max-width:500px) {
+.footer-menu ul{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+}
+li{
+list-style-type: none;
+
+}
+.l6 ul li{
+  font-size: 25px;
+  font-family:sans-serif;
+
+  margin-top: 20px;
+}
+
+
+</style>
+</head>
+<body>
+  <center>
+    <nav >
+      <nav class="navbar navbar-expand-lg bg-dark" style="z-index: 40;">
+          <div class="container-fluid">
+            <a class="navbar-brand text-light " href="#"><img src="image/logo.png" width="50px" alt=""> Bronx</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-md-center " id="navbarNav">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link active text-light menu__link" aria-current="page" href="index.html"><h3 class="l1">Luggage</h3></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light menu__link" href="bags.html"><h3 class="l1">Bags</h3></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light menu__link" href="backpack.html"><h3 class="l1">Backpacks</h3></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  text-light menu__link" href="brands.html"><h3 class="l1">Brands</h3></a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <a class="navbar-brand text-light " href="signuppage.html"><img src="image/account-removebg.png" width="50px" alt="">Sign in</a>
+            </div>
+          </div>
+        </nav>
+  </nav>
+    <br><br><br>
+    <div class="body">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><img src="image/34948-9-women-bag-hd.png" alt="" width="100%"></div>
+                <div class="col-md-6" style=" margin-top: 10px;"><h1>Bags</h1>
+                    <hr>
+                <br>
+                <h3 style=" word-spacing: 5px; ">
+                  A bag is a container made of thin paper or plastic, for example one that is used in shops to put things in that a customer has bought. A bag of things is the amount of things contained in a bag. A bag is a strong container with one or two handles, used to carry things in.
+                </h3>
+            </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container" id="delsey">
+      <div class="row g-0  ">
+        <div class="col-sm-6 col-md-6"><h1 class="topline ">
+          
+         Coach
+      </h1>
+      <hr></div>
+      <div class="col-md-2"></div>
+        <div class="col-sm-3 col-md-2"><div class="dropdown" style="margin-top: 10px;">
+          <button class="btn btn-dark btn1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Brands
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+             <a class="nav-link active" aria-current="page" href="#delsey"> <button class="dropdown-item" type="button"><h4>Coach</h4></button></a>
+            </li>
+            <li>
+              <a class="nav-link active" aria-current="page" href="#eagle"> <button class="dropdown-item" type="button"><h4>Chanel</h4></button></a>
+             </li>
+             <li>
+              <a class="nav-link active" aria-current="page" href="#briggs"> <button class="dropdown-item" type="button"><h4>Hermes</h4></button></a>
+             </li>
+             
+             </ul>
+        </div>
+  </div>
+  <div class="col-md-2 col-sm-3 " >
+      <div class="dropdown" style="margin-top: 10px;">
+          <button class="btn btn-dark btn1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Bags
+          </button>
+          <ul class="dropdown-menu">
+            
+            <li>
+              <a class="nav-link active" aria-current="page" href="#eagle"> <button class="dropdown-item" type="button"><h4>Hand Bags</h4></button></a>
+             </li>
+             <li>
+              <a class="nav-link active" aria-current="page" href="#briggs"> <button class="dropdown-item" type="button"><h4>Zip Cabin</h4></button></a>
+             </li>
+             
+             </ul>
+         
+        
+  </div>
+</div>
+
+      </div>
+       
+    <br><br><br><br>
+    <center>
+       
+      <div class="container">
+        <div class="row">
+            <div class=" col-lg-3 col-md-6 col-sm-6">
+                <div class="card text-center card2 " style="width: 18rem;">
+                    <div id="carouselExampleControls11" class="carousel slide card1" >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="image/PhotoRoom-20240722_193245.png" class="d-block w-100" alt="Loading...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_193225.png" class="d-block w-100" alt="">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_193306.png" class="d-block w-100" alt="Loading..." style="width: 200px;">
+                          </div>
+                      
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls11" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls11" data-bs-slide="next">
+                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+  <div class="card-body">
+   
+    <hr>
+        <h5>Coach</h5>
+    
+    <p class="card-text">Willow Shoulder Bag
+      NEW ARRIVAL
+      £395
+ <p>
+ </p>
+     
+      </p>
+    <a href="#" class="btn   btn-dark">$3,34</a>
+  </div>
+</div>
+            </div>
+            <div class=" col-lg-3 col-md-6 col-sm-6">
+                <div class="card text-center card2 " style="width: 18rem;">
+                    <div id="carouselExampleControls12" class="carousel slide card1" >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="image/PhotoRoom-20240722_194029.png " class="d-block w-100" alt="Loading...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_193951.png" class="d-block w-100" alt="Loading...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_194010.png" class="d-block w-100" alt="">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls12" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls12" data-bs-slide="next">
+                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+  <div class="card-body">
+
+    <hr>
+        <h5>Coach</h5> 
+    
+    <p class="card-text">
+     <p>
+      North Tote Bag 32
+      NEW ARRIVAL
+      </p>
+      </p>
+    <a href="#" class="btn   btn-dark">$369.00</a>
+  </div>
+</div>
+            </div>
+            <div class=" col-lg-3 col-md-6 col-sm-6">
+                <div class="card text-center card2" style="width: 18rem;">
+                    <div id="carouselExampleControls13" class="carousel slide card1" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="image/PhotoRoom-20240722_194357.png" class="d-block w-100" alt="Loading...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_194442.png" class="d-block w-100" alt="Loading...">
+                          </div>
+                         
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_194419.png " class="d-block w-100" alt="">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls13" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls13" data-bs-slide="next">
+                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+  <div class="card-body">
+    <hr>
+        <h5>Coach</h5>
+    
+    <p class="card-text"> 
+      <p>Cassie Crossbody Bag 19</p>
+     </p>
+    <a href="#" class="btn   btn-dark">$309.00</a>
+  </div>
+</div>
+            </div>
+            <div class=" col-lg-3 col-md-6 col-sm-6">
+                <div class="card text-center card2" style="width: 18rem;">
+                    <div id="carouselExampleControls14" class="carousel slide card1" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="image/PhotoRoom-20240722_194845.png" class="d-block w-100" alt="Loading...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_194933.png" class="d-block w-100" alt="Loading...">
+                          </div>
+                        
+                          <div class="carousel-item">
+                            <img src="image/PhotoRoom-20240722_194907.png" class="d-block w-100" alt="">
+                          </div>
+                         
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls14" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls14" data-bs-slide="next">
+                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+  <div class="card-body">
+    <hr>
+        <h5>Coach</h5>
+    
+    <p class="card-text">
+   
+
+      <p>Willow Shoulder Bag In Signature Canvas</p>
+    
+      
+      </p>
+    <a href="#" class="btn   btn-dark">$4,555</a>
+  </div>
+</div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class=" col-lg-3 col-md-6 col-sm-6">  <div class="card text-center card2" style="width: 18rem;">
+                        <div id="carouselExampleControls15" class="carousel slide card1" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="image/PhotoRoom-20240722_195307.png" class="d-block w-100" alt="Loading...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/PhotoRoom-20240722_195344.png" class="d-block w-100" alt="Loading...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/PhotoRoom-20240722_195325.png " class="d-block w-100" alt="">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls15" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls15" data-bs-slide="next">
+                              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+      <div class="card-body">
+      
+        <hr>
+            <h5>Coach</h5>
+
+        
+        <p class="card-text">
+        <p>Juno Bag</p>
+         
+          
+          </p>
+        <a href="#" class="btn   btn-dark">$1,800</a>
+      </div>
+    </div></div>
+    <div id="loader" class="loader">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+  </div>
+                    <div class=" col-lg-3 col-md-6 col-sm-6">  <div class="card text-center card2" style="width: 18rem;">
+                        <div id="carouselExampleControls16" class="carousel slide card1" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="image/PhotoRoom-20240722_195813.png" class="d-block w-100" alt="Loading...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/PhotoRoom-20240722_195858.png" class="d-block w-100" alt="Loading...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/PhotoRoom-20240722_195834.png" class="d-block w-100" alt="">
+                              </div>
+                              
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls16" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls16" data-bs-slide="next">
+                              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+      <div class="card-body">
+        
+        <hr>
+            <h5>Coach</h5>
+        
+        <p class="card-text"></p>
+          
+        Day Tote Bag
+          </p>
+        <a href="#" class="btn   btn-dark">$4,876</a>
+      </div>
+    </div></div>
+          
+                    <div class="col-md-6 ">
+                        <div class="vedio1">
+                        <video class=" h-full w-full object-cover object-center"   autoplay loop muted>
+                            
+                            <source src="image/vecteezy_neutral-color-patterned-handbag-on-made-bed_13755051.mp4" type="video/ogg">
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                    </div>
+                </div>  </div>
+              </center>
+
+<br><br><br><br>
+<center>
+<div class="coantainer" id="eagle">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Chanel</h1>
+    </div>
+    <div class="col-md-6">
+      
+    </div>
+  </div>
+</div>
+</center>
+
+
+              <br><br><br><br>
+              <center>
+                    <div class="container">
+                  <div class="row">
+                      <div class=" col-lg-3 col-md-6 col-sm-6">
+                          <div class="card text-center card2 " style="width: 18rem;">
+                              <div id="carouselExampleControls11" class="carousel slide card1" >
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img src="image/PhotoRoom-20240721_165523.png" class="d-block w-100" alt="Loading...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_165716.png" class="d-block w-100" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_165540.png" class="d-block w-100" alt="Loading..." style="width: 200px;">
+                                    </div>
+                                  
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls11" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls11" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+            <div class="card-body">
+             
+              <hr>
+                  <h5>Chanel</h5>
+              
+              <p class="card-text">MINI BAG WITH TOP HANDLE
+                Shiny Lambskin & Gold-Tone Metal
+                Purple
+                Ref. AS4958 B16872 NY564
+           <p>
+           </p>
+               
+                </p>
+              <a href="#" class="btn   btn-dark">$3,34</a>
+            </div>
+          </div>
+                      </div>
+                      <div class=" col-lg-3 col-md-6 col-sm-6">
+                          <div class="card text-center card2 " style="width: 18rem;">
+                              <div id="carouselExampleControls12" class="carousel slide card1" >
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img src="image/PhotoRoom-20240721_163923.png" class="d-block w-100" alt="Loading...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_163832 (1).png" class="d-block w-100" alt="Loading...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_163852.png" class="d-block w-100" alt="">
+                                    </div>
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls12" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls12" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+            <div class="card-body">
+        
+              <hr>
+                  <h5>Chanel</h5> black leather premum chanel bags
+              
+              <p class="card-text">
+               <p>
+               
+                </p>
+                </p>
+              <a href="#" class="btn   btn-dark">$369.00</a>
+            </div>
+          </div>
+                      </div>
+                      <div class=" col-lg-3 col-md-6 col-sm-6">
+                          <div class="card text-center card2" style="width: 18rem;">
+                              <div id="carouselExampleControls13" class="carousel slide card1" data-bs-ride="carousel">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img src="image/PhotoRoom-20240721_155021.png" class="d-block w-100" alt="Loading...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_155021.png" class="d-block w-100" alt="Loading...">
+                                    </div>
+                                   
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_155047.png" class="d-block w-100" alt="">
+                                    </div>
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls13" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls13" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+            <div class="card-body">
+              <hr>
+                  <h5>
+                    Chanel
+                  </h5>
+              
+              <p class="card-text"> 29 soft usage bag 
+                <p></p>
+               </p>
+              <a href="#" class="btn   btn-dark">$309.00</a>
+            </div>
+          </div>
+                      </div>
+                      <div class=" col-lg-3 col-md-6 col-sm-6">
+                          <div class="card text-center card2" style="width: 18rem;">
+                              <div id="carouselExampleControls14" class="carousel slide card1" data-bs-ride="carousel">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img src="image/PhotoRoom-20240721_160002.png" class="d-block w-100" alt="Loading...">
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_155936.png" class="d-block w-100" alt="Loading...">
+                                    </div>
+                                  
+                                    <div class="carousel-item">
+                                      <img src="image/PhotoRoom-20240721_155936.png" class="d-block w-100" alt="">
+                                    </div>
+                                   
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls14" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls14" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                                </div>
+            <div class="card-body">
+              <hr>
+                  <h5>Chanel</h5>
+              
+              <p class="card-text">
+                Washed Denim & Gold-Tone Metal
+Blue
+Ref.  A01112 B16747 NX158
+                <p></p>
+              
+                
+                </p>
+              <a href="#" class="btn   btn-dark">$4,555</a>
+            </div>
+          </div>
+                      </div>
+                      <div class="container">
+                          <div class="row">
+                              <div class=" col-lg-3 col-md-6 col-sm-6">  <div class="card text-center card2" style="width: 18rem;">
+                                  <div id="carouselExampleControls15" class="carousel slide card1" data-bs-ride="carousel">
+                                      <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                          <img src="image/PhotoRoom-20240721_155936.png" class="d-block w-100" alt="Loading...">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img src="image/PhotoRoom-20240721_160030.png" class="d-block w-100" alt="Loading...">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img src="image/PhotoRoom-20240721_160002.png" class="d-block w-100" alt="">
+                                        </div>
+                                      </div>
+                                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls15" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                      </button>
+                                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls15" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                      </button>
+                                    </div>
+                <div class="card-body">
+                
+                  <hr>
+                      <h5>Chanel</h5>
+                      Washed Denim & Gold-Tone Metal
+Blue
+Ref.  A01112 B16747 NX158
+                  
+                  <p class="card-text">
+                  <p></p>
+                   
+                    
+                    </p>
+                  <a href="#" class="btn   btn-dark">$1,800</a>
+                </div>
+              </div></div>
+                              <div class=" col-lg-3 col-md-6 col-sm-6">  <div class="card text-center card2" style="width: 18rem;">
+                                  <div id="carouselExampleControls16" class="carousel slide card1" data-bs-ride="carousel">
+                                      <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                          <img src="image/PhotoRoom-20240721_160413.png" class="d-block w-100" alt="Loading...">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img src="image/PhotoRoom-20240721_160332.png" class="d-block w-100" alt="Loading...">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img src="image/PhotoRoom-20240721_160352.png" class="d-block w-100" alt="">
+                                        </div>
+                                        
+                                      </div>
+                                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls16" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                      </button>
+                                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls16" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                      </button>
+                                    </div>
+                <div class="card-body">
+                  
+                  <hr>
+                      <h5>Chanel</h5>
+                  
+                  <p class="card-text"></p>
+                    
+                  CLASSIC 11.12 HANDBAG
+Washed Denim & Gold-Tone Metal
+Blue
+Ref.  A01112 B16747 NX158
+                    </p>
+                  <a href="#" class="btn   btn-dark">$4,876</a>
+                </div>
+              </div></div>
+                        
+                    
+                              <div class="col-md-6 ">
+                                  <div class="vedio1">
+                                  <video class=" h-full w-full object-cover object-center"   autoplay loop muted>
+                                      
+                                      <source src="image/vecteezy_pink-handbag-on-bed_13826756.mp4" type="video/ogg">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                  </div>
+                              </div>
+                          </div>  </div>
+                        </center>
+
+                        <br><br><br><br>
+                        <center>
+                        <div class="coantainer" id="briggs">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h1>Hermes</h1>
+                            </div>
+                            <div class="col-md-6">
+                              
+                            </div>
+                          </div>
+                        </div>
+                        </center>
+                       <br><br><br><br>
+                        <center>
+                          <div class="container" >
+                        <div class="row">
+                            <div class=" col-lg-3 col-md-6 col-sm-6">
+                                <div class="card text-center card2 " style="width: 18rem; height: 40rem;">
+                                    <div id="carouselExampleControls111" class="carousel slide card1" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="image/PhotoRoom-20240721_145413.png" class="d-block w-100" alt="Loading...">
+                                          </div>
+                                          
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_145349.png" class="d-block w-100" alt="Loading..." style="width: 200px;">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_145447.png" class="d-block w-100" alt="">
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls111" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls111" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                  <div class="card-body">
+                
+                    <hr>
+                        <h5>Hermes</h5>
+                    
+                    <p class="card-text">BASELINE
+                      Herbag Zip cabin bag 
+                      
+                      
+                      
+                 <p>
+                 
+                 </p>
+                     
+                      </p>
+                    <a href="#" class="btn   btn-dark">$4,150</a>
+                  </div>
+                </div>
+                            </div>
+                            <div class=" col-lg-3 col-md-6 col-sm-6">
+                                <div class="card text-center card2 " style="width: 18rem; height: 40rem;">
+                                    <div id="carouselExampleControls112" class="carousel slide card1" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="image/PhotoRoom-20240721_150224.png" class="d-block w-100" alt="Loading...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_150250.png" class="d-block w-100" alt="Loading...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_150121.png" class="d-block w-100" alt="">
+                                          </div>
+                                        
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls112" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls112" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                  <div class="card-body">
+                    
+                    <hr>
+                        <h5>Hermes</h5>
+                    
+                    <p class="card-text">
+                      r.m.s weekender bag
+                      
+                     
+                      
+                     
+                     <p>
+                       
+                      </p>
+                      </p>
+                    <a href="#" class="btn   btn-dark">$9,700</a>
+                  </div>
+                </div>
+                            </div>
+                            <div class=" col-lg-3 col-md-6 col-sm-6">
+                                <div class="card text-center card2" style="width: 18rem;">
+                                    <div id="carouselExampleControls113" class="carousel slide card1" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="image/PhotoRoom-20240721_150950.png" class="d-block w-100" alt="Loading...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_151030.png" class="d-block w-100" alt="Loading...">
+                                          </div>
+                                         
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_151009.png" class="d-block w-100" alt="">
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls113" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls113" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                  <div class="card-body">
+                   
+                    <hr>
+                        <h5>Hermes</h5>
+                    
+                    <p class="card-text">
+                      <p>R.M.S WEEKENDER BAG</p>
+                     </p>
+                    <a href="#" class="btn   btn-dark">$9,700</a>
+                  </div>
+                </div>
+                            </div>
+                            <div class=" col-lg-3 col-md-6 col-sm-6">
+                                <div class="card text-center card2" style="width: 18rem;">
+                                    <div id="carouselExampleControls114" class="carousel slide card1" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="image/PhotoRoom-20240721_145037.png" class="d-block w-100" alt="Loading...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_145115.png" class="d-block w-100" alt="Loading...">
+                                          </div>
+                                        
+                                          <div class="carousel-item">
+                                            <img src="image/PhotoRoom-20240721_145055.png" class="d-block w-100" alt="">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="" class="d-block w-100" alt="">
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls114" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls114" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                  <div class="card-body">
+                    
+                    <hr>
+                        <h5>Hermes</h5>
+                    
+                    <p class="card-text">
+                    hermis zip cabin 
+             
+                   
+                      <p></p>
+                    
+                      
+                      </p>
+                    <a href="#" class="btn   btn-dark">$4,150</a>
+                  </div>
+                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class=" col-lg-3 col-md-6 col-sm-6">  <div class="card text-center card2" style="width: 18rem;">
+                                        <div id="carouselExampleControls115" class="carousel slide card1" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                              <div class="carousel-item active">
+                                                <img src="image/PhotoRoom-20240721_151854 (1).png" class="d-block w-100" alt="Loading...">
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="image/PhotoRoom-20240721_151939.png" class="d-block w-100" alt="Loading...">
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="image/PhotoRoom-20240721_151916 (1).png" class="d-block w-100" alt="">
+                                              </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls115" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls115" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                              <span class="visually-hidden">Next</span>
+                                            </button>
+                                          </div>
+                      <div class="card-body">
+                        
+                        <hr>
+                            <h5>Hermes</h5>
+                        
+                        <p class="card-text">
+                        STEEPLE 28 BAG
+                       
+                   
+                        <p></p>
+                         
+                          
+                          </p>
+                        <a href="#" class="btn   btn-dark">$5,450</a>
+                      </div>
+                    </div></div>
+                                    <div class=" col-lg-3 col-md-6 col-sm-6">  <div class="card text-center card2" style="width: 18rem;">
+                                        <div id="carouselExampleControls116" class="carousel slide card1" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                              <div class="carousel-item active">
+                                                <img src="image/PhotoRoom-20240721_152931.png" class="d-block w-100" alt="Loading...">
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="image/PhotoRoom-20240721_152755 (1).png" class="d-block w-100" alt="Loading...">
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="image/PhotoRoom-20240721_152907.png" class="d-block w-100" alt="">
+                                              </div>
+                                              
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls116" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls116" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                              <span class="visually-hidden">Next</span>
+                                            </button>
+                                          </div>
+                      <div class="card-body">
+                       
+                        <hr>
+                            <h5>Hermes</h5>
+                        Purselang tote bag
+                        <p class="card-text">
+                          <p></p>
+                          </p>
+                        <a href="#" class="btn   btn-dark">$3,950</a>
+                      </div>
+                    </div></div>
+                              
+                          
+                                    <div class="col-md-6 ">
+                                        <div class="vedio1">
+                                        <video class=" h-full w-full object-cover object-center"   autoplay loop muted>
+                                            
+                                            <source src="image/5743263-uhd_4096_2160_25fps.mp4" type="video/ogg">
+                                            Your browser does not support the video tag.
+                                          </video>
+                                        </div>
+                                    </div>
+                                </div>  </div>
+                              </center>
+                              <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="image/4719549.png" alt="" width="30px"></button>
+                              <script>
+
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</center>
+</div>
+</body>
+<footer>
+  <div class="footer-content">
+      <h3>Bronx Luggage</h3>
+      <br>
+
+      <div class="container ">
+        <div class="row l5">
+          <div class="col-md-4 l6">
+            <ul>
+              <h3>Products</h3>
+              <hr>
+              <li><a href="index.html">Luggage</a></li>
+              <li><a href="backpack.html">BackPacks</a></li>
+              <li><a href="bags.html">Bags</a></li>
+              <li><a href="brands.html">Brands</a></li>
+              
+            </ul>
+          </div>
+          <div class="col-md-4 l6">
+            <ul>
+              <h3>About Us</h3>
+              <hr>
+              <li><a href="aboutus.html #co ">Why Bronx Luggage</a></li>
+              <li><a href="aboutus.html #cp">Corporate Gifting</a></li>
+              <li><a href="aboutus.html #cc">How To Clean Your Luggage</a></li>
+           
+              
+            </ul>
+          </div>
+          <div class="col-md-4 l6">
+            <ul>
+              <h3>Help</h3>
+              <hr>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+            
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <ul class="socials">
+          <li><a href="https://www.facebook.com/login/"><i class="fa fa-facebook"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+<dotlottie-player src="https://lottie.host/28d308fa-5a8e-429f-9159-4089668dbb54/EaSAkyV8Bh.json" background="transparent" speed="1" style="width: 50px; height: 300px;" loop autoplay></dotlottie-player></i></a></li>
+          <li><a href="https://www.x.com/login/"><i class="fa fa-twitter"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+            <dotlottie-player src="https://lottie.host/0efc6746-f548-4e5a-8858-452d1fe7c48f/ZMtDWB3DFA.json" background="transparent" speed="1" style="width: 50px; height: 300px;" loop autoplay></dotlottie-player></i></a></li>
+          <li><a href="https://www.google.com/intl/en-GB/account/about/"><i class="fa fa-google-plus"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+            <dotlottie-player src="https://lottie.host/e0b78d22-1b41-439f-a9c2-af0da0dcd075/owmqdgXLQS.json" background="transparent" speed="1" style="width: 50px; height: 300px;" loop autoplay></dotlottie-player></i></a></li>
+          <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+            <dotlottie-player src="https://lottie.host/22c77a19-3d70-4e3a-86dc-10889257b36d/sEo0CtIxcN.json" background="transparent" speed="1" style="width: 50px; height: 300px;" loop autoplay></dotlottie-player></i></a></li>
+          <li><a href="https://www.instagram.com/"><i class="fa fa-linkedin-square"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+            <dotlottie-player src="https://lottie.host/c1bfa8bc-4f6a-49de-8690-1af41586ba18/02CUYYxTZm.json" background="transparent" speed="1" style="width: 50px; height: 300px;" loop autoplay></dotlottie-player></i></a></li>
+      </ul>
+  </div>
+  <div class="footer-bottom">
+      <p>copyright &copy; <a href="index.html">Bronx Luggage</a>  </p>
+              <div class="footer-menu">
+                <ul class="f-menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="aboutus.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="aboutus.html">Blog</a></li>
+                </ul>
+              </div>
+  </div>
+
+</footer>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Method</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+      
+
+    document.addEventListener("DOMContentLoaded", function() {
+     
+        document.getElementById('loader').style.display = 'none'; 
+        document.getElementById('content').style.display = 'block';
+    });
+    
+        </script>
+  <style>
+    .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); 
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.content {
+    display: none; 
+}
+
+    .payment-option {
+      display: none;
+    }
+    .payment-tabs .nav-link {
+      padding: 1rem 2rem;
+    }
+    .form-control::placeholder {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Choose a Payment Method</h2>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <ul class="nav nav-tabs payment-tabs" id="paymentTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="visa-tab" data-toggle="tab" href="#visa" role="tab" aria-controls="visa" aria-selected="true">
+              <img src="image/visa.png" alt="Visa">
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="paypal-tab" data-toggle="tab" href="#paypal" role="tab" aria-controls="paypal" aria-selected="false">
+              <img src="image/paypal.png" alt="PayPal">
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="google-pay-tab" data-toggle="tab" href="#google-pay" role="tab" aria-controls="google-pay" aria-selected="false">
+              <img src="image/google-pay-india.png" alt="Google Pay">
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="apple-pay-tab" data-toggle="tab" href="#apple-pay" role="tab" aria-controls="apple-pay" aria-selected="false">
+              <img src="image/apple-pay.png" alt="Apple Pay">
+            </a>
+          </li>
+        </ul>
+        <div id="loader" class="loader">
+          <div class="spinner"></div>
+          <p>Loading...</p>
+      </div>
+        <div class="tab-content mt-4" id="paymentTabsContent">
+          <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+            <form action="Purchasesuccess.html" target="_blank">
+              <div class="form-group">
+                <label for="card-number">Card number</label>
+                <input type="tel" class="form-control" id="card-number" placeholder="Enter card number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required >
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="expiry-date">Expiration date</label>
+                  <input type="date" class="form-control" id="expiry-date" placeholder="MM/YYYY" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="cvv">Card security code</label>
+                  <input type="tel" class="form-control" id="cvv" placeholder="CVV" pattern="[0-9]{3}"  required >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="card-name">Name on card</label>
+                <input type="text" class="form-control" id="card-name" placeholder="Enter name on card" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Pay Now</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="paypal" role="tabpanel" aria-labelledby="paypal-tab">
+            
+            <a href="Purchasesuccess.html" target="_blank"><button class="btn btn-primary btn-block">Pay with PayPal</button></a>
+          </div>
+          <div class="tab-pane fade" id="google-pay" role="tabpanel" aria-labelledby="google-pay-tab">
+            
+            <a href="Purchasesuccess.html" target="_blank"><button class="btn btn-primary btn-block">Pay with Google Pay</button></a>
+          </div>
+          <div class="tab-pane fade" id="apple-pay" role="tabpanel" aria-labelledby="apple-pay-tab">
+            
+            <a href="Purchasesuccess.html" target="_blank"><button class="btn btn-primary btn-block"> Pay with Apple Pay</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#paymentTabs a').on('click', function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    });
+  
+  </script>
+</body>
+</html>
+
